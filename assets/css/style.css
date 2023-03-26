@@ -1,0 +1,53 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+} 	
+
+.video{
+    height: 100%;
+    margin: 0px;
+    object-fit: cover;
+    padding: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+video {
+	object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+	backdrop-filter: blur(2px);
+	
+	
+	z-index: -1;
+}
+
+video::before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	background: rgba(13, 250, 151, 0.445);
+	left: 0;
+}
+
+.overlay{
+	position: absolute;
+	top: 100px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+	z-index: 1;
+}
+
+#profileImage{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	border: 1px solid #fff;
+}
+
